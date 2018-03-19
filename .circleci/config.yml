@@ -33,18 +33,18 @@ jobs:
       # Load installed gems from cache if possible, bundle install then save cache 
       # Multiple caches are used to increase the chance of a cache hit
       
-      - restore_cache:
-          keys:
-            - gem-cache-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
-            - gem-cache-{{ arch }}-{{ .Branch }}
-            - gem-cache
+      # - restore_cache:
+      #     keys:
+      #       - gem-cache-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+      #       - gem-cache-{{ arch }}-{{ .Branch }}
+      #       - gem-cache
             
-      - run: bundle install --path vendor/bundle
+      # - run: bundle install --path vendor/bundle
       
-      - save_cache:
-          key: gem-cache-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
-          paths:
-            - vendor/bundle
+      # - save_cache:
+      #     key: gem-cache-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+      #     paths:
+      #       - vendor/bundle
 
       # Build the app and run tests
       - run:
