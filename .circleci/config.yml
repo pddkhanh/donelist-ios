@@ -10,12 +10,13 @@ jobs:
     macos:
       xcode: "9.2.0"
     shell: /bin/bash --login -eo pipefail
+    working_directory: /Users/distiller/project
     environment:
       LC_ALL: en_US.UTF-8
       LANG: en_US.UTF-8
       XCODE_SCHEME: DoneList
       XCODE_WORKSPACE: DoneList.xcworkspace
-      FL_OUTPUT_DIR: $CIRCLE_WORKING_DIRECTORY/output
+      FL_OUTPUT_DIR: /Users/distiller/project/output
 
     steps:
       - checkout
@@ -64,9 +65,9 @@ jobs:
           command: cp $FL_OUTPUT_DIR/scan/report.junit $FL_OUTPUT_DIR/scan/report.xml
           when: always
       - store_test_results:
-          path: $FL_OUTPUT_DIR/scan
+          path: /Users/distiller/project/output/scan
       - store_artifacts:
-          path: $FL_OUTPUT_DIR
+          path: /Users/distiller/project/output
 
 workflows:
   version: 2
