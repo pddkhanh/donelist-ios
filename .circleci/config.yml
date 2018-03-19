@@ -48,10 +48,10 @@ jobs:
           paths:
             - vendor/bundle
 
-      # Build the app and run tests
+      # Setup fastlane
       - run:
-          name: Build and run tests
-          command: bundle exec fastlane setup_circle_ci
+          name: Setup fastlane
+          command: bundle exec fastlane setup_ci
 
       # Build the app and run tests
       - run:
