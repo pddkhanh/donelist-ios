@@ -48,10 +48,6 @@ jobs:
           paths:
             - vendor/bundle
 
-      # Setup fastlane
-      - run:
-          name: Setup fastlane
-          command: bundle exec fastlane setup_ci
 
       # Build the app and run tests
       - run:
@@ -69,10 +65,6 @@ jobs:
       - store_artifacts:
           path: /Users/distiller/project/output
 
-      # Code coverage
-      - run:
-          name: Code coverage
-          command: bundle exec fastlane coverage
 
 workflows:
   version: 2

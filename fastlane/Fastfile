@@ -7,7 +7,7 @@ platform :ios do
 	scheme = 'DoneList'
 
 	desc "Setup CI"
-	lane :setup_ci do
+	before_all do
 	    setup_circle_ci
 	end
 
@@ -18,11 +18,8 @@ platform :ios do
     		scheme: scheme,
     		device: 'iPhone X',
     	)
-  	end
 
-  	desc "Generate coverage"
-  	lane :coverage do
-	    slather(
+    	slather(
 	    	proj: project,
 		    workspace: workspace,
 		    scheme: scheme,
@@ -30,6 +27,7 @@ platform :ios do
 		    coveralls: true,
 		    ignore: ['Pods/*']
 	    )
-  end
+  	end
+
 
 end
