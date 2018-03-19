@@ -1,0 +1,21 @@
+default_platform(:ios)
+
+platform :ios do
+
+	before_all do
+	    setup_circle_ci
+	end
+
+	workspace = 'DoneList.xcworkspace'
+	scheme = 'DoneList'
+
+  	desc "Runs all the tests"
+  	lane :test do
+    	scan(
+    		workspace: workspace,
+    		scheme: scheme,
+    		device: 'iPhone X',
+    	)
+  	end
+
+end
