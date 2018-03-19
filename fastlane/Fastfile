@@ -18,4 +18,15 @@ platform :ios do
     	)
   	end
 
+  	desc "Generate coverage"
+  	lane :coverage do
+	    slather(
+		    workspace: workspace,
+		    scheme: scheme,
+		    circleci: true,
+		    coveralls: true,
+		    ignore: ['Pods/*']
+	    )
+  end
+
 end
