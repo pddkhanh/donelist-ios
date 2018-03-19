@@ -9,13 +9,12 @@ jobs:
     # Specify the Xcode version to use
     macos:
       xcode: "9.2.0"
-    working_directory: /Users/distiller/project
     environment:
       LC_ALL: en_US.UTF-8
       LANG: en_US.UTF-8
       XCODE_SCHEME: DoneList
       XCODE_WORKSPACE: DoneList.xcworkspace
-
+      FL_OUTPUT_DIR: $CIRCLE_WORKING_DIRECTORY/output
     steps:
       - checkout
 
@@ -60,16 +59,12 @@ jobs:
       # and save the same XML files under test-results folder
       # in the Artifacts tab
       - run:
-          command: mv fastlane/test_output/report.junit fastlane/test_output/report.xml
+          command: cp $FL_OUTPUT_DIR/scan/report.junit $FL_OUTPUT_DIR/scan/report.xml
           when: always
       - store_test_results:
-          path: test_output/report.xml
+          path: $FL_OUTPUT_DIR/scan
       - store_artifacts:
-          path: /tmp/test-results
-          destination: scan-test-results
-      - store_artifacts:
-          path: ~/Library/Logs/scan
-          destination: scan-logs
+          path: $FL_OUTPUT_DIR
 
 workflows:
   version: 2
