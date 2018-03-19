@@ -5,11 +5,6 @@ platform :ios do
 	workspace = 'DoneList.xcworkspace'
 	scheme = 'DoneList'
 
-	desc "Runs all the tests"
-	lane :setup_circle_ci do
-	    setup_circle_ci
-	end
-
   	desc "Runs all the tests"
   	lane :test do
     	scan(
