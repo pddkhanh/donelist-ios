@@ -12,9 +12,16 @@ target 'DoneList' do
   pod 'RxCocoa'
   pod 'RxDataSources'
 
+  pod 'Fabric'
+  pod 'Crashlytics'
+  pod 'CocoaLumberjack/Swift'
+
   target 'DoneListTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Nimble'
+    pod 'RxTest'
+    pod 'RxBlocking'
   end
 
   target 'DoneListUITests' do
