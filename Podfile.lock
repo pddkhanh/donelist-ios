@@ -18,6 +18,7 @@ PODS:
   - RxSwift (4.1.2)
   - RxTest (4.1.2):
     - RxSwift (~> 4.0)
+  - SnapKit (4.0.0)
 
 DEPENDENCIES:
   - CocoaLumberjack/Swift
@@ -29,6 +30,7 @@ DEPENDENCIES:
   - RxDataSources
   - RxSwift
   - RxTest
+  - SnapKit
 
 SPEC CHECKSUMS:
   CocoaLumberjack: 2e258a064cacc8eb9a2aca318e24d02a0a7fd56d
@@ -41,7 +43,8 @@ SPEC CHECKSUMS:
   RxDataSources: cb7c31e652a87ebb919da45f716bbb87b3765f6b
   RxSwift: e49536837d9901277638493ea537394d4b55f570
   RxTest: e634f15fd2c2cd0e0120132ef7a4f7be69ad0393
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: 98e7f833fc2b2d24049d1b2417a495044f5d03cc
+PODFILE CHECKSUM: 066a21af7a9978c80554c8759d32977b19acc08a
 
 COCOAPODS: 1.4.0
