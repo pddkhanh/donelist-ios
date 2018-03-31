@@ -15,7 +15,7 @@ public struct DoneItemModel {
     public var created: Date?
     public var updated: Date?
 
-    public init(id: String, title: String?, created: Date? = Date(), updated: Date? = nil) {
+    public init(id: String = UUID().uuidString, title: String?, created: Date? = Date(), updated: Date? = nil) {
         self.id = id
         self.title = title
         self.created = created

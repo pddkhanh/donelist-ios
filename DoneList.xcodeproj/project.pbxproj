@@ -15,11 +15,10 @@
 		4B136054206E8AAB0050F496 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B136053206E8AAB0050F496 /* Logger.swift */; };
 		4B4FE2582061CA0000A53813 /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4FE2572061CA0000A53813 /* Tracker.swift */; };
 		4B713AF9205FEB4300F16A10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B713AF8205FEB4300F16A10 /* AppDelegate.swift */; };
-		4B713AFB205FEB4300F16A10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B713AFA205FEB4300F16A10 /* ViewController.swift */; };
-		4B713AFE205FEB4300F16A10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B713AFC205FEB4300F16A10 /* Main.storyboard */; };
 		4B713B00205FEB4300F16A10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B713AFF205FEB4300F16A10 /* Assets.xcassets */; };
 		4B713B03205FEB4300F16A10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B713B01205FEB4300F16A10 /* LaunchScreen.storyboard */; };
 		4B713B19205FEB4300F16A10 /* DoneListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B713B18205FEB4300F16A10 /* DoneListUITests.swift */; };
+		4BD2B9FB206F9E16002D3432 /* ItemsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD2B9FA206F9E16002D3432 /* ItemsListViewController.swift */; };
 		5D6808B441A25B212F33FAD9 /* Pods_DoneListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CB6B02D7E0FE7C7660DD542 /* Pods_DoneListTests.framework */; };
 		60F045D41CECD71428DF54F6 /* Pods_DoneList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC0C63A83C2AC346BBB6C9 /* Pods_DoneList.framework */; };
 		ED361F090EE9017030952520 /* Pods_DoneListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153EC55AFD10B2B00D2FAAC4 /* Pods_DoneListUITests.framework */; };
@@ -55,8 +54,6 @@
 		4B4FE2572061CA0000A53813 /* Tracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracker.swift; sourceTree = "<group>"; };
 		4B713AF5205FEB4300F16A10 /* DoneList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoneList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B713AF8205FEB4300F16A10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4B713AFA205FEB4300F16A10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4B713AFD205FEB4300F16A10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4B713AFF205FEB4300F16A10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B713B02205FEB4300F16A10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B713B04205FEB4300F16A10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,6 +62,7 @@
 		4B713B14205FEB4300F16A10 /* DoneListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoneListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B713B18205FEB4300F16A10 /* DoneListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListUITests.swift; sourceTree = "<group>"; };
 		4B713B1A205FEB4300F16A10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BD2B9FA206F9E16002D3432 /* ItemsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListViewController.swift; sourceTree = "<group>"; };
 		6411EBA92EB968BCD6242481 /* Pods-DoneListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoneListTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoneListTests/Pods-DoneListTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6DCC0C63A83C2AC346BBB6C9 /* Pods_DoneList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoneList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CB6B02D7E0FE7C7660DD542 /* Pods_DoneListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoneListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,10 +174,9 @@
 		4B713AF7205FEB4300F16A10 /* DoneList */ = {
 			isa = PBXGroup;
 			children = (
+				4BD2B9F7206F9DD9002D3432 /* Scenes */,
 				4B136042206E7E4D0050F496 /* Components */,
 				4B713AF8205FEB4300F16A10 /* AppDelegate.swift */,
-				4B713AFA205FEB4300F16A10 /* ViewController.swift */,
-				4B713AFC205FEB4300F16A10 /* Main.storyboard */,
 				4B713AFF205FEB4300F16A10 /* Assets.xcassets */,
 				4B713B01205FEB4300F16A10 /* LaunchScreen.storyboard */,
 				4B713B04205FEB4300F16A10 /* Info.plist */,
@@ -205,6 +202,22 @@
 				4B713B1A205FEB4300F16A10 /* Info.plist */,
 			);
 			path = DoneListUITests;
+			sourceTree = "<group>";
+		};
+		4BD2B9F7206F9DD9002D3432 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				4BD2B9F9206F9E01002D3432 /* ItemsList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		4BD2B9F9206F9E01002D3432 /* ItemsList */ = {
+			isa = PBXGroup;
+			children = (
+				4BD2B9FA206F9E16002D3432 /* ItemsListViewController.swift */,
+			);
+			path = ItemsList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,7 +293,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Khanh Pham";
 				TargetAttributes = {
 					4B713AF4205FEB4300F16A10 = {
@@ -326,7 +339,6 @@
 			files = (
 				4B713B03205FEB4300F16A10 /* LaunchScreen.storyboard in Resources */,
 				4B713B00205FEB4300F16A10 /* Assets.xcassets in Resources */,
-				4B713AFE205FEB4300F16A10 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +451,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -447,6 +460,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -536,7 +550,7 @@
 				4B136054206E8AAB0050F496 /* Logger.swift in Sources */,
 				4B136046206E7EBD0050F496 /* DoneItemModel.swift in Sources */,
 				4B4FE2582061CA0000A53813 /* Tracker.swift in Sources */,
-				4B713AFB205FEB4300F16A10 /* ViewController.swift in Sources */,
+				4BD2B9FB206F9E16002D3432 /* ItemsListViewController.swift in Sources */,
 				4B713AF9205FEB4300F16A10 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -575,14 +589,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4B713AFC205FEB4300F16A10 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4B713AFD205FEB4300F16A10 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4B713B01205FEB4300F16A10 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -608,6 +614,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -615,6 +622,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -665,6 +673,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -672,6 +681,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

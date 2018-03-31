@@ -11,6 +11,7 @@ target 'DoneList' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'RxDataSources'
+  pod 'SnapKit'
 
   pod 'Fabric'
   pod 'Crashlytics'
