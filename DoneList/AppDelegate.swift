@@ -18,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let window = UIWindow(frame: UIScreen.main.bounds)
         let vc = ItemsListViewController()
-        window.rootViewController = vc
+        let navVC = UINavigationController(rootViewController: vc)
+        window.rootViewController = navVC
         window.makeKeyAndVisible()
         self.window = window
 
