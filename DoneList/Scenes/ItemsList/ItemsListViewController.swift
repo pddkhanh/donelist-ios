@@ -68,11 +68,11 @@ class ItemsListViewController: UIViewController, UITableViewDelegate {
     }
 
     private func removeItem(_ item: DoneItemModel) {
-        let alert = UIAlertController(title: "Are you sure?", message: "This cannot be undone", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: { [itemsRepo] (action) in
+        let alert = UIAlertController(title: "", message: "Are you sure you want to delete this item?", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { [itemsRepo] (action) in
             itemsRepo.remove(itemId: item.id)
         }))
-        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
 
