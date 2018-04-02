@@ -17,6 +17,10 @@ target 'DoneList' do
   pod 'Crashlytics'
   pod 'CocoaLumberjack/Swift'
 
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+
   target 'DoneListTests' do
     inherit! :search_paths
     # Pods for testing

@@ -13,6 +13,9 @@
 		4B13604D206E82CA0050F496 /* DoneItemsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B13604C206E82CA0050F496 /* DoneItemsRepositoryTests.swift */; };
 		4B136052206E84160050F496 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B136051206E84160050F496 /* TestHelper.swift */; };
 		4B136054206E8AAB0050F496 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B136053206E8AAB0050F496 /* Logger.swift */; };
+		4B31D8E02071A35100D07178 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B31D8DF2071A35100D07178 /* GoogleService-Info.plist */; };
+		4B31D8E22071A86E00D07178 /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B31D8E12071A86E00D07178 /* Authenticator.swift */; };
+		4B31D8E42071AD5D00D07178 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B31D8E32071AD5D00D07178 /* Core.swift */; };
 		4B4FE2582061CA0000A53813 /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4FE2572061CA0000A53813 /* Tracker.swift */; };
 		4B713AF9205FEB4300F16A10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B713AF8205FEB4300F16A10 /* AppDelegate.swift */; };
 		4B713B00205FEB4300F16A10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B713AFF205FEB4300F16A10 /* Assets.xcassets */; };
@@ -51,6 +54,9 @@
 		4B13604C206E82CA0050F496 /* DoneItemsRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneItemsRepositoryTests.swift; sourceTree = "<group>"; };
 		4B136051206E84160050F496 /* TestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
 		4B136053206E8AAB0050F496 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		4B31D8DF2071A35100D07178 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4B31D8E12071A86E00D07178 /* Authenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticator.swift; sourceTree = "<group>"; };
+		4B31D8E32071AD5D00D07178 /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
 		4B4FE2572061CA0000A53813 /* Tracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracker.swift; sourceTree = "<group>"; };
 		4B713AF5205FEB4300F16A10 /* DoneList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoneList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B713AF8205FEB4300F16A10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -125,9 +131,12 @@
 		4B136042206E7E4D0050F496 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				4B4FE2572061CA0000A53813 /* Tracker.swift */,
 				4B136043206E7EB30050F496 /* DoneItemsRepository.swift */,
 				4B136045206E7EBD0050F496 /* DoneItemModel.swift */,
 				4B136053206E8AAB0050F496 /* Logger.swift */,
+				4B31D8E12071A86E00D07178 /* Authenticator.swift */,
+				4B31D8E32071AD5D00D07178 /* Core.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -180,7 +189,7 @@
 				4B713AFF205FEB4300F16A10 /* Assets.xcassets */,
 				4B713B01205FEB4300F16A10 /* LaunchScreen.storyboard */,
 				4B713B04205FEB4300F16A10 /* Info.plist */,
-				4B4FE2572061CA0000A53813 /* Tracker.swift */,
+				4B31D8DF2071A35100D07178 /* GoogleService-Info.plist */,
 			);
 			path = DoneList;
 			sourceTree = "<group>";
@@ -339,6 +348,7 @@
 			files = (
 				4B713B03205FEB4300F16A10 /* LaunchScreen.storyboard in Resources */,
 				4B713B00205FEB4300F16A10 /* Assets.xcassets in Resources */,
+				4B31D8E02071A35100D07178 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,19 +458,27 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-DoneList/Pods-DoneList-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -547,10 +565,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B136044206E7EB30050F496 /* DoneItemsRepository.swift in Sources */,
+				4B31D8E22071A86E00D07178 /* Authenticator.swift in Sources */,
 				4B136054206E8AAB0050F496 /* Logger.swift in Sources */,
 				4B136046206E7EBD0050F496 /* DoneItemModel.swift in Sources */,
 				4B4FE2582061CA0000A53813 /* Tracker.swift in Sources */,
 				4BD2B9FB206F9E16002D3432 /* ItemsListViewController.swift in Sources */,
+				4B31D8E42071AD5D00D07178 /* Core.swift in Sources */,
 				4B713AF9205FEB4300F16A10 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
