@@ -17,11 +17,35 @@ class Tracker {
 
     func setup() {
         Fabric.with([Crashlytics.self])
-        FirebaseApp.configure()
     }
 
     func track(_ name: String, parameters: [String: Any]?) {
         Analytics.logEvent(name, parameters: parameters)
         Answers.logCustomEvent(withName: name, customAttributes: parameters)
     }
+
+    func trackLogIn(method: String, userID: String?, customAttributes: [String: Any]?) {
+        Analytics.setUserID(userID)
+        for item in customAttributes ?? [:] {
+            var val: String? = item.value as? String
+            if val == nil {
+                val = "\(item.value)"
+            }
+            if let val = val {
+                Analytics.setUserProperty(val, forName: item.key)
+            }
+        }
+
+        Answers.logLogin(withMethod: method, success: NSNumber(value: true),
+                         customAttributes: customAttributes)
+    }
+
+    func clear() {
+        Analytics.setUserID(nil)
+    }
+
+}
+
+struct TrackerEvent {
+    static var error: String { return "Error" }
 }

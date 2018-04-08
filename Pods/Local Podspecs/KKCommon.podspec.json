@@ -1,0 +1,32 @@
+{
+  "name": "KKCommon",
+  "version": "1.0.0",
+  "license": "MIT",
+  "homepage": "https://github.com/pddkhanh/KKCommon",
+  "authors": {
+    "Khanh Pham": "khanh.phamdd@gmail.com"
+  },
+  "summary": "Common classes and extensions",
+  "source": {
+    "path": "./"
+  },
+  "source_files": "Source/**/*.{h,m,swift}",
+  "requires_arc": true,
+  "platforms": {
+    "ios": "9.0"
+  },
+  "pod_target_xcconfig": {
+    "SWIFT_VERSION": "4.1"
+  },
+  "dependencies": {
+    "RxSwift": [
+      "~> 4.1"
+    ],
+    "RxCocoa": [
+      "~> 4.1"
+    ],
+    "CocoaLumberjack/Swift": [
+      "~> 3.4"
+    ]
+  }
+}

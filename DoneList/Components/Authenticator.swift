@@ -14,26 +14,39 @@ class Authenticator {
 
     static let shared = Authenticator()
 
+    private let currentUserSubject: BehaviorSubject<MyUser?>
+
+    init() {
+        currentUserSubject = BehaviorSubject(value: Auth.auth().currentUser?.myUser)
+    }
+
     var currentUser: MyUser? {
         return Auth.auth().currentUser?.myUser
     }
 
+    var currentUserChanges: Observable<MyUser?> {
+        return currentUserSubject.asObservable()
+    }
+
     func signInAnonymously() -> Single<MyUser> {
         return Auth.auth().rx.signInAnonymously()
-            .map { $0.myUser }
+            .flatMap { user in
+                self.currentUserSubject.onNext(user.myUser)
+                return .just(user.myUser)
+            }
     }
 
 }
 
 protocol MyUserInfo {
-    var uid: String? { get }
+    var uid: String { get }
     var email: String? { get }
     var displayName: String? { get }
 }
 
 struct MyUser: MyUserInfo {
 
-    var uid: String? { return user.uid }
+    var uid: String { return user.uid }
 
     var email: String? { return user.email }
 

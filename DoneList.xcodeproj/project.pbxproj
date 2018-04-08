@@ -10,9 +10,7 @@
 		4B136044206E7EB30050F496 /* DoneItemsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B136043206E7EB30050F496 /* DoneItemsRepository.swift */; };
 		4B136046206E7EBD0050F496 /* DoneItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B136045206E7EBD0050F496 /* DoneItemModel.swift */; };
 		4B136049206E7F340050F496 /* DoneItemModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B136048206E7F340050F496 /* DoneItemModelTests.swift */; };
-		4B13604D206E82CA0050F496 /* DoneItemsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B13604C206E82CA0050F496 /* DoneItemsRepositoryTests.swift */; };
 		4B136052206E84160050F496 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B136051206E84160050F496 /* TestHelper.swift */; };
-		4B136054206E8AAB0050F496 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B136053206E8AAB0050F496 /* Logger.swift */; };
 		4B31D8E02071A35100D07178 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B31D8DF2071A35100D07178 /* GoogleService-Info.plist */; };
 		4B31D8E22071A86E00D07178 /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B31D8E12071A86E00D07178 /* Authenticator.swift */; };
 		4B31D8E42071AD5D00D07178 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B31D8E32071AD5D00D07178 /* Core.swift */; };
@@ -22,6 +20,11 @@
 		4B713B03205FEB4300F16A10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B713B01205FEB4300F16A10 /* LaunchScreen.storyboard */; };
 		4B713B19205FEB4300F16A10 /* DoneListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B713B18205FEB4300F16A10 /* DoneListUITests.swift */; };
 		4BD2B9FB206F9E16002D3432 /* ItemsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD2B9FA206F9E16002D3432 /* ItemsListViewController.swift */; };
+		4BD5F9252078518900C90C4A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD5F9242078518900C90C4A /* RootViewController.swift */; };
+		4BD5F927207852CE00C90C4A /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD5F926207852CE00C90C4A /* Utils.swift */; };
+		4BD5F92A2078530900C90C4A /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD5F9292078530900C90C4A /* SplashViewController.swift */; };
+		4BD5F93320787BD000C90C4A /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD5F93220787BD000C90C4A /* App.swift */; };
+		4BD5F935207889E300C90C4A /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD5F934207889E300C90C4A /* Firebase.swift */; };
 		5D6808B441A25B212F33FAD9 /* Pods_DoneListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CB6B02D7E0FE7C7660DD542 /* Pods_DoneListTests.framework */; };
 		60F045D41CECD71428DF54F6 /* Pods_DoneList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC0C63A83C2AC346BBB6C9 /* Pods_DoneList.framework */; };
 		ED361F090EE9017030952520 /* Pods_DoneListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153EC55AFD10B2B00D2FAAC4 /* Pods_DoneListUITests.framework */; };
@@ -51,9 +54,7 @@
 		4B136043206E7EB30050F496 /* DoneItemsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneItemsRepository.swift; sourceTree = "<group>"; };
 		4B136045206E7EBD0050F496 /* DoneItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneItemModel.swift; sourceTree = "<group>"; };
 		4B136048206E7F340050F496 /* DoneItemModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneItemModelTests.swift; sourceTree = "<group>"; };
-		4B13604C206E82CA0050F496 /* DoneItemsRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneItemsRepositoryTests.swift; sourceTree = "<group>"; };
 		4B136051206E84160050F496 /* TestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
-		4B136053206E8AAB0050F496 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		4B31D8DF2071A35100D07178 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4B31D8E12071A86E00D07178 /* Authenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticator.swift; sourceTree = "<group>"; };
 		4B31D8E32071AD5D00D07178 /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
@@ -69,6 +70,13 @@
 		4B713B18205FEB4300F16A10 /* DoneListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListUITests.swift; sourceTree = "<group>"; };
 		4B713B1A205FEB4300F16A10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BD2B9FA206F9E16002D3432 /* ItemsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListViewController.swift; sourceTree = "<group>"; };
+		4BD5F9242078518900C90C4A /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		4BD5F926207852CE00C90C4A /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		4BD5F9292078530900C90C4A /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		4BD5F931207871FF00C90C4A /* DoneList-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DoneList-Bridging-Header.h"; sourceTree = "<group>"; };
+		4BD5F93220787BD000C90C4A /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		4BD5F934207889E300C90C4A /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
+		4BD5F936207895B900C90C4A /* DoneList.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DoneList.entitlements; sourceTree = "<group>"; };
 		6411EBA92EB968BCD6242481 /* Pods-DoneListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoneListTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoneListTests/Pods-DoneListTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6DCC0C63A83C2AC346BBB6C9 /* Pods_DoneList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoneList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CB6B02D7E0FE7C7660DD542 /* Pods_DoneListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoneListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,9 +142,11 @@
 				4B4FE2572061CA0000A53813 /* Tracker.swift */,
 				4B136043206E7EB30050F496 /* DoneItemsRepository.swift */,
 				4B136045206E7EBD0050F496 /* DoneItemModel.swift */,
-				4B136053206E8AAB0050F496 /* Logger.swift */,
 				4B31D8E12071A86E00D07178 /* Authenticator.swift */,
 				4B31D8E32071AD5D00D07178 /* Core.swift */,
+				4BD5F926207852CE00C90C4A /* Utils.swift */,
+				4BD5F93220787BD000C90C4A /* App.swift */,
+				4BD5F934207889E300C90C4A /* Firebase.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -145,7 +155,6 @@
 			isa = PBXGroup;
 			children = (
 				4B136048206E7F340050F496 /* DoneItemModelTests.swift */,
-				4B13604C206E82CA0050F496 /* DoneItemsRepositoryTests.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -183,6 +192,7 @@
 		4B713AF7205FEB4300F16A10 /* DoneList */ = {
 			isa = PBXGroup;
 			children = (
+				4BD5F936207895B900C90C4A /* DoneList.entitlements */,
 				4BD2B9F7206F9DD9002D3432 /* Scenes */,
 				4B136042206E7E4D0050F496 /* Components */,
 				4B713AF8205FEB4300F16A10 /* AppDelegate.swift */,
@@ -190,6 +200,7 @@
 				4B713B01205FEB4300F16A10 /* LaunchScreen.storyboard */,
 				4B713B04205FEB4300F16A10 /* Info.plist */,
 				4B31D8DF2071A35100D07178 /* GoogleService-Info.plist */,
+				4BD5F931207871FF00C90C4A /* DoneList-Bridging-Header.h */,
 			);
 			path = DoneList;
 			sourceTree = "<group>";
@@ -216,6 +227,8 @@
 		4BD2B9F7206F9DD9002D3432 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4BD5F928207852FD00C90C4A /* Splash */,
+				4BD5F9232078517D00C90C4A /* Root */,
 				4BD2B9F9206F9E01002D3432 /* ItemsList */,
 			);
 			path = Scenes;
@@ -227,6 +240,22 @@
 				4BD2B9FA206F9E16002D3432 /* ItemsListViewController.swift */,
 			);
 			path = ItemsList;
+			sourceTree = "<group>";
+		};
+		4BD5F9232078517D00C90C4A /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				4BD5F9242078518900C90C4A /* RootViewController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		4BD5F928207852FD00C90C4A /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				4BD5F9292078530900C90C4A /* SplashViewController.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,7 +336,13 @@
 				TargetAttributes = {
 					4B713AF4205FEB4300F16A10 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					4B713B08205FEB4300F16A10 = {
 						CreatedOnToolsVersion = 9.2;
@@ -460,6 +495,7 @@
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/KKCommon/KKCommon.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -473,6 +509,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KKCommon.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -566,12 +603,16 @@
 			files = (
 				4B136044206E7EB30050F496 /* DoneItemsRepository.swift in Sources */,
 				4B31D8E22071A86E00D07178 /* Authenticator.swift in Sources */,
-				4B136054206E8AAB0050F496 /* Logger.swift in Sources */,
+				4BD5F93320787BD000C90C4A /* App.swift in Sources */,
+				4BD5F9252078518900C90C4A /* RootViewController.swift in Sources */,
 				4B136046206E7EBD0050F496 /* DoneItemModel.swift in Sources */,
+				4BD5F927207852CE00C90C4A /* Utils.swift in Sources */,
+				4BD5F935207889E300C90C4A /* Firebase.swift in Sources */,
 				4B4FE2582061CA0000A53813 /* Tracker.swift in Sources */,
 				4BD2B9FB206F9E16002D3432 /* ItemsListViewController.swift in Sources */,
 				4B31D8E42071AD5D00D07178 /* Core.swift in Sources */,
 				4B713AF9205FEB4300F16A10 /* AppDelegate.swift in Sources */,
+				4BD5F92A2078530900C90C4A /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,7 +620,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B13604D206E82CA0050F496 /* DoneItemsRepositoryTests.swift in Sources */,
 				4B136049206E7F340050F496 /* DoneItemModelTests.swift in Sources */,
 				4B136052206E84160050F496 /* TestHelper.swift in Sources */,
 			);
@@ -736,6 +776,8 @@
 			baseConfigurationReference = C295C2BD1431A4A63B79B1DB /* Pods-DoneList.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = DoneList/DoneList.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28B4UGC4GQ;
 				INFOPLIST_FILE = DoneList/Info.plist;
@@ -743,6 +785,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.khanhpham.DoneList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DoneList/DoneList-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -753,6 +797,8 @@
 			baseConfigurationReference = DCE44A0B197BFACAA3A3539E /* Pods-DoneList.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = DoneList/DoneList.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28B4UGC4GQ;
 				INFOPLIST_FILE = DoneList/Info.plist;
@@ -760,6 +806,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.khanhpham.DoneList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DoneList/DoneList-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

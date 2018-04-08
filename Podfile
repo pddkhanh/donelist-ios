@@ -21,6 +21,8 @@ target 'DoneList' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
 
+  pod 'KKCommon', :path => './LocalPods/KKCommon'
+
   target 'DoneListTests' do
     inherit! :search_paths
     # Pods for testing

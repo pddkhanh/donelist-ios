@@ -14,14 +14,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+
+        Logger.shared.configure()
+        Firebase.setup()
         Tracker.shared.setup()
 
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let vc = ItemsListViewController()
-        let navVC = UINavigationController(rootViewController: vc)
-        window.rootViewController = navVC
-        window.makeKeyAndVisible()
         self.window = window
+        let vc = RootViewController(nibName: nil, bundle: nil)
+        window.rootViewController = vc
+        window.makeKeyAndVisible()
 
         return true
     }

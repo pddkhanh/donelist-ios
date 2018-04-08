@@ -16,7 +16,7 @@ class ItemsListViewController: UIViewController, UITableViewDelegate {
 
     private var tableView: UITableView!
     private let ItemCellIdentifier = "ItemCell"
-    private let itemsRepo = DoneItemsRepository()
+    private let itemsRepo = DoneItemsRepository.shared
     private let disposeBag = DisposeBag()
     private var addBtn: UIBarButtonItem!
     private var dataSource: RxTableViewSectionedAnimatedDataSource<AnimatableSectionModel<String, DoneItemModel>>!
@@ -48,12 +48,6 @@ class ItemsListViewController: UIViewController, UITableViewDelegate {
         setupBinding()
     }
 
-    private func fakeData() {
-        itemsRepo.save(item: DoneItemModel(title: "Item 1"))
-        itemsRepo.save(item: DoneItemModel(title: "Item 2"))
-        itemsRepo.save(item: DoneItemModel(title: "Item 3"))
-    }
-
     private func addItem() {
         tableView.setEditing(false, animated: true)
         let alert = UIAlertController(title: "What did you get done?", message: "", preferredStyle: .alert)
@@ -61,6 +55,7 @@ class ItemsListViewController: UIViewController, UITableViewDelegate {
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [itemsRepo] (action) in
             guard let tf = alert.textFields?.first else { return }
             guard let title = tf.text?.trimmingCharacters(in: .whitespaces), !title.isEmpty else { return }
+            Tracker.shared.track("add_item", parameters: nil)
             itemsRepo.save(item: DoneItemModel(title: title))
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
@@ -70,6 +65,7 @@ class ItemsListViewController: UIViewController, UITableViewDelegate {
     private func removeItem(_ item: DoneItemModel) {
         let alert = UIAlertController(title: "", message: "Are you sure you want to delete this item?", preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { [itemsRepo] (action) in
+            Tracker.shared.track("remove_item", parameters: nil)
             itemsRepo.remove(itemId: item.id)
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
@@ -87,6 +83,7 @@ class ItemsListViewController: UIViewController, UITableViewDelegate {
             var update = item
             update.title = title
             itemsRepo.save(item: update)
+            Tracker.shared.track("edit_item", parameters: nil)
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
@@ -112,10 +109,10 @@ class ItemsListViewController: UIViewController, UITableViewDelegate {
             canEditRowAtIndexPath: { _, _ in true }
         )
 
-
         itemsRepo.items()
             .asDriver(onErrorJustReturn: [])
             .map { [AnimatableSectionModel(model: "", items: $0)] }
+            .debug("Items", trimOutput: true)
             .drive(tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
 

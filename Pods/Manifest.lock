@@ -43,6 +43,10 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.3)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.3)
   - GTMSessionFetcher/Core (1.1.14)
+  - KKCommon (1.0.0):
+    - CocoaLumberjack/Swift (~> 3.4)
+    - RxCocoa (~> 4.1)
+    - RxSwift (~> 4.1)
   - leveldb-library (1.20)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
@@ -70,6 +74,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
+  - KKCommon (from `./LocalPods/KKCommon`)
   - Nimble
   - RxBlocking
   - RxCocoa
@@ -77,6 +82,10 @@ DEPENDENCIES:
   - RxSwift
   - RxTest
   - SnapKit
+
+EXTERNAL SOURCES:
+  KKCommon:
+    :path: ./LocalPods/KKCommon
 
 SPEC CHECKSUMS:
   CocoaLumberjack: 2e258a064cacc8eb9a2aca318e24d02a0a7fd56d
@@ -91,6 +100,7 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: 8d20d890d65c917f9f7d9950b6e10a760ad34321
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   GTMSessionFetcher: 390ea358e5a0d0133153806f744662dad933d06b
+  KKCommon: 583a9c58e21121f488ea38f13337f177cffe6ee9
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
@@ -101,6 +111,6 @@ SPEC CHECKSUMS:
   RxTest: e634f15fd2c2cd0e0120132ef7a4f7be69ad0393
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: fb13a84f11a2198addd95116e2e693f2cf7242e3
+PODFILE CHECKSUM: e8775a3116d65f9f52a8b29031cb804280cefa05
 
 COCOAPODS: 1.4.0
